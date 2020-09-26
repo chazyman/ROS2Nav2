@@ -17,9 +17,11 @@ chmod +x installTurtleBot3Nav2.sh
 
 # To run Sample in a Terminal run following commands (follow step 3 - 4 & Navigating see above link) Make sure you position turtleBot3 in Rviz at a simalar location in the Gazebo World. 
 
+
 source /usr/share/gazebo/setup.sh
 source ~/dev_ws/install/setup.bash
 export TURTLEBOT3_MODEL=waffle
+
 export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/dev_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo/models
 
-ros2 launch nav2_bringup nav2_simulation_launch.p
+ros2 launch nav2_bringup nav2_simulation_launch.py
