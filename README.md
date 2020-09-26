@@ -8,6 +8,7 @@ Run script installTurtleBot3Nav2.sh to install ROS2 & Gazebo9 (TurtleBot3 is bui
 
 # Get script
 cd ~
+
 git clone https://github.com/chazyman/ROS2DashingNav2.git
 
 # Make script executable
