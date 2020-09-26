@@ -11,6 +11,7 @@ assume local dir is Home
 cd ~/ROS2
 chmod +x installTurtleBot3Nav2.sh
 
+
 # Run script
 ./installTurtleBot3Nav2.sh
 
