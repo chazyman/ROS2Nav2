@@ -9,6 +9,7 @@ assume local dir is Home
 
 # Make script executable
 cd ~/ROS2
+
 chmod +x installTurtleBot3Nav2.sh
 
 
@@ -19,7 +20,9 @@ chmod +x installTurtleBot3Nav2.sh
 
 
 source /usr/share/gazebo/setup.sh
+
 source ~/dev_ws/install/setup.bash
+
 export TURTLEBOT3_MODEL=waffle
 
 export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/dev_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo/models
