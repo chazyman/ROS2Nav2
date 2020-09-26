@@ -5,10 +5,13 @@ TurtleBot 3 ROS2 Dashing Navigation Sample App. Currently this demo only works o
 Few modifications from available setup located @ https://navigation.ros.org/getting_started/index.html
 
 Run script installTurtleBot3Nav2.sh to install ROS2 & Gazebo9 (TurtleBot3 is build from source in a workspace called dev_ws )
-assume local dir is Home
+
+# Get script
+cd ~
+git clone https://github.com/chazyman/ROS2DashingNav2.git
 
 # Make script executable
-cd ~/ROS2
+cd ~/ROS2DashingNav2
 
 chmod +x installTurtleBot3Nav2.sh
 
