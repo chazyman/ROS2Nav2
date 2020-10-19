@@ -2,6 +2,28 @@
 TurtleBot 3 ROS2 Navigation 2 Links & Scripts
 
 # Links
+Navagtion 2 Source Code (Github)
+https://github.com/ros-planning/navigation2
+
+Navigation 2 Documentation
+https://navigation.ros.org/index.html
+
+Navigation 2 Overview
+https://github.com/ros-planning/navigation2/blob/main/doc/design/Navigation_2_Overview.pdf
+
+Intel Matt Hansen (Intel Open Source Robotics RosCon19 Talk on Navigation 2
+https://www.youtube.com/watch?v=4_U8lWWvQV0
+https://roscon.ros.org/2019/talks/roscon2019_navigation2_overview_final.pdf
+
+
+Intel Robot DevKit with Navigation2 & RealSense Camera Wrappers
+https://intel.github.io/robot_devkit_doc/pages/slam.html
+
+Behavior Trees
+https://www.behaviortree.dev/
+https://www.theconstructsim.com/rdp-033-behavior-trees-ros-davide-faconti/
+Finite State Machines are Dead ! Long Live Behaviors Trees by Davide Faconti (TheConstruct)
+https://www.youtube.com/watch?v=22KUPktetzg
 
 
 # TurtleBot 3 ROS2 Foxy Navigation Sample App. ROS2 Foxy on Ubuntu Focal 20.04
