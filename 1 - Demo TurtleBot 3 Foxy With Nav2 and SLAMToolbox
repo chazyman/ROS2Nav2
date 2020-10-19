@@ -1,0 +1,59 @@
+# Foxy Source Demo of turtlebot3 - Nav2 - SLAMToolBox
+
+# TurtleBot After Workspace Build
+
+# Terminal 1 
+cd ~/foxydev_ws
+source /usr/share/gazebo/setup.sh
+source ~/foxydev_ws/install/setup.bash
+export TURTLEBOT3_MODEL=waffle
+#export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/foxydev_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo/models
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/foxydev_ws/src/turtlebot3/turtlebot3_simulations/turtlebot3_gazebo/models
+
+# TurtleBot3
+# Rviz
+# list of launch file are located
+# /opt/ros/foxy/share/nav2_bringup/launch#
+ros2 launch nav2_bringup tb3_simulation_launch.py
+
+# ---------- or ---------
+# Check TutlBot3 Simulation
+# https://emanual.robotis.com/docs/en/platform/turtlebot3/simulation/#ros-packages-for-gazebo
+#
+ros2 launch turtlebot3_gazebo empty_world.launch.py
+# -or -
+ros2 launch turtlebot3_gazebo turtlebot3_world.launch.py
+# -or -
+ros2 launch turtlebot3_gazebo turtlebot3_house.launch.py
+
+
+# ---------- or ------
+# Test Gazebo works with ROS2
+# In Terminal 1
+source ~/foxydev_ws/setup.bash
+gazebo --verbose /opt/ros/foxy/share/gazebo_plugins/worlds/gazebo_ros_diff_drive_demo.world
+
+# In Terminal 2
+source ~/foxydev_ws/install/setup.bash
+# gedit /opt/ros/foxy/share/gazebo_plugins/worlds/gazebo_ros_diff_drive_demo.world
+ros2 topic pub /demo/cmd_demo geometry_msgs/Twist '{linear: {x: 1.0}}' -1
+
+#  --------- or -------
+#  Looking at Navigation 2 Example from Intel Robotic
+#  https://intel.github.io/robot_devkit_doc/pages/navigation.html
+#
+# To kill a Gazebo Server 
+# Get ID of Gazebo Server first line 2nd field --> 4 digit id 
+# ps aux | grep gzserver
+# kill -2 <four-digit ID from first line Second field>
+
+# Terminal 1
+cd ~/foxydev_ws
+source /usr/share/gazebo/setup.sh
+source ~/foxydev_ws/install/setup.bash
+export TURTLEBOT3_MODEL=waffle
+export GAZEBO_MODEL_PATH=$GAZEBO_MODEL_PATH:~/foxydev_ws/install/turtlebot3_gazebo/share/turtlebot3_gazebo/models
+
+
+
+ros2 launch turtlebot3_navigation2 navigation2.launch.py use_sim_time:=True autostart:=True map:=`ros2 pkg prefix turtlebot3_navigation2`/share/turtlebot3_navigation2/map/map.yaml

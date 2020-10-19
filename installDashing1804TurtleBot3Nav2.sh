@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # https://emanual.robotis.com/docs/en/platform/turtlebot3/ros2_setup/
-# Step 1 Install ROS2 (Dashing)
+# Step 1 Install ROS2 (Dashing) on Ubuntu Bionic 18.04
 # https://index.ros.org/doc/ros2/Installation/Dashing/Linux-Install-Debians/
 # Set Local
 sudo locale-gen en_US en_US.UTF-8
